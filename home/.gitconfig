@@ -6,3 +6,6 @@
 	helper = !/usr/bin/gh auth git-credential
 [init]
 	defaultBranch = main
+[user]
+	email = xander.bhalla@gmail.com
+	name = Alexander Bhalla
