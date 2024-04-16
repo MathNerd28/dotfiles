@@ -1,0 +1,31 @@
+* {
+  all: unset;
+}
+
+.bar {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding-left: 12px;
+  padding-right: 12px;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.workspace_entry.empty {
+  color: rgba(255,255,255,0.5);
+}
+
+.workspace_entry.active {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border-width: 2px;
+  border-radius: 3px;
+}
+
+.battery_bar.Charging {
+  color: limegreen;
+}
+
+.zero {
+  color: rgba(0,0,0,0);
+}

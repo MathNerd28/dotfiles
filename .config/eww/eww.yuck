@@ -1,0 +1,117 @@
+; -------
+; Widgets
+; -------
+
+; Date/Time
+(defpoll time_bar
+  :interval "100ms"
+  "date '+%A %B %d, %Y %r'"
+)
+
+; Battery
+(defpoll battery_percent
+  :interval "1s"
+  "sh ~/.config/eww/scripts/battery percent"
+)
+(defpoll battery_icon
+  :interval "1s"
+  "sh ~/.config/eww/scripts/battery icon"
+)
+(defpoll battery_status
+  :interval "1s"
+  "sh ~/.config/eww/scripts/battery status"
+)
+(defwidget battery_bar []
+  (box
+    :class "battery_bar ${battery_status}"
+    "${battery_icon}  ${battery_percent}%"
+  )
+)
+
+; Hyprland
+(deflisten hyprland_active_window_title
+  :initial ""
+  "bash ~/.config/eww/scripts/hyprland_active_window_title"
+)
+(defwidget hyprland_window_title []
+  (label
+    :text hyprland_active_window_title
+    :limit-width 100
+  )
+)
+
+(deflisten hyprland_workspaces_list
+  :initial "[]"
+  "bash ~/.config/eww/scripts/hyprland_workspaces_list"
+)
+(deflisten hyprland_active_workspace
+  :initial 1
+  :onchange ""
+  "bash ~/.config/eww/scripts/hyprland_active_workspace"
+)
+(defwidget hyprland_active_workspace_dummy []
+  (box
+    :class "zero"
+    ; Required to actually listen
+    hyprland_active_workspace
+  )
+)
+
+(defwidget hyprland_workspaces []
+  (box
+    :orientation "h"
+    :space-evenly true
+    :spacing 2
+    (for workspace in hyprland_workspaces_list
+      (button
+        :onclick "hyprctl dispatch workspace ${workspace.id}"
+        :class "button"
+        (box
+          :class "workspace_entry ${workspace.id == hyprland_active_workspace ? "active" : "inactive"} ${workspace.windows > 0 ? "occupied" : "empty"}"
+          (label
+            :text "${workspace.id}"
+          )
+        )
+      )
+    )
+  )
+)
+
+; ---
+; BAR
+; ---
+
+(defwindow bar
+  :monitor 0
+  :geometry (
+    geometry
+    :width "100%"
+    :height "24px"
+    :anchor "top center"
+  )
+  :stacking "fg"
+  :exclusive true
+  (centerbox
+    :orientation "h"
+    (box
+      :class "bar_begin"
+      :halign "start"
+      :orientation "h"
+      (hyprland_workspaces)
+      (hyprland_active_workspace_dummy)
+    )
+    (box
+      :class "bar_center"
+      (hyprland_window_title)
+    )
+    (box
+      :class "bar_end"
+      :orientation "h"
+      :space-evenly false
+      :spacing 12
+      :halign "end"
+      (battery_bar)
+      time_bar
+    )
+  )
+)

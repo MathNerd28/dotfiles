@@ -1,0 +1,62 @@
+#!/bin/sh
+
+BATTERY=/sys/class/power_supply/BAT1
+
+status="$(cat "$BATTERY/status")"
+capacity="$(cat "$BATTERY/capacity")"
+
+# Using Material Design Icons
+# battery-{charging?}-{%}
+getIcon() {
+	if [ "$status" = "Charging" ]; then
+		case "$capacity" in
+			[0-4]) icon="󰢟" ;;
+			[5-9]|1[0-4]) icon="󰢜" ;;
+			1[5-9]|2[0-4]) icon="󰂆" ;;
+			2[5-9]|3[0-4]) icon="󰂇" ;;
+			3[5-9]|4[0-4]) icon="󰂈" ;;
+			4[5-9]|5[0-4]) icon="󰢝" ;;
+			5[5-9]|6[0-4]) icon="󰂉" ;;
+			6[5-9]|7[0-4]) icon="󰢞" ;;
+			7[5-9]|8[0-4]) icon="󰂊" ;;
+			8[5-9]|9[0-4]) icon="󰂋" ;;
+			9[5-9]|100) icon="󰂅" ;;
+			*) icon="󰂑" ;;
+		esac
+	elif [ "$status" = "Discharging" ]; then
+		case "$capacity" in
+			[0-4]) icon="󰂎" ;;
+			[5-9]|1[0-4]) icon="󰁺" ;;
+			1[5-9]|2[0-4]) icon="󰁻" ;;
+			2[5-9]|3[0-4]) icon="󰁼" ;;
+			3[5-9]|4[0-4]) icon="󰁽" ;;
+			4[5-9]|5[0-4]) icon="󰁾" ;;
+			5[5-9]|6[0-4]) icon="󰁿" ;;
+			6[5-9]|7[0-4]) icon="󰂀" ;;
+			7[5-9]|8[0-4]) icon="󰂁" ;;
+			8[5-9]|9[0-4]) icon="󰂂" ;;
+			9[5-9]|100) icon="󰁹" ;;
+			*) icon="󰂑" ;;
+		esac
+	fi
+
+	echo $icon;
+}
+
+getCapacity() {
+	echo $capacity
+}
+
+getStatus() {
+	if [ $percent -le 5 ]; then echo "Critical"
+	elif [ $percent -le 100 ]; then echo "Low"
+	else echo $status
+	fi
+}
+
+if [ "$1" = "icon" ]; then getIcon
+elif [ "$1" = "percent" ]; then getCapacity
+elif [ "$1" = "status" ]; then getStatus
+fi
+
+exit

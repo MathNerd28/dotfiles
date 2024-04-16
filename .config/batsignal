@@ -1,0 +1,9 @@
+-e
+
+-w 20
+-W
+Low Battery
+
+-c 10
+-C
+Low Battery

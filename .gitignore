@@ -1,0 +1,41 @@
+# -------
+# .config
+# -------
+
+# Explicitly include everything
+.config/*
+
+# Include these, no special handling needed
+!.config/albert
+!.config/avizo
+!.config/eww
+!.config/fontconfig
+!.config/gtk-3.0
+!.config/hypr
+!.config/kitty
+!.config/procps
+!.config/qt5ct
+!.config/qt6ct
+!.config/swaync
+!.config/albert.conf
+!.config/batsignal
+!.config/code-flags.conf
+!.config/electron-flags.conf
+
+# Exclude GitHub oauth token
+!.config/gh
+.config/gh/hosts.yml
+
+# Only include VSCode user settings
+!.config/Code - OSS
+.config/Code - OSS/*
+!.config/Code - OSS/User
+.config/Code - OSS/User/*
+!.config/Code - OSS/User/settings.json
+!.config/Code - OSS/User/keybindings.json
+!.config/Code - OSS/User/snippets
+
+# -----
+# $HOME
+# -----
+

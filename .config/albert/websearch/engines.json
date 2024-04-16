@@ -1,0 +1,30 @@
+[
+    {
+        "iconPath": ":github",
+        "id": "d387a672",
+        "name": "GitHub",
+        "trigger": "github",
+        "url": "https://github.com/search?utf8=✓&q=%s"
+    },
+    {
+        "iconPath": ":google",
+        "id": "fb9ae381",
+        "name": "Google",
+        "trigger": "google",
+        "url": "https://www.google.com/search?q=%s"
+    },
+    {
+        "iconPath": ":maps",
+        "id": "614acbdc",
+        "name": "Google Maps",
+        "trigger": "maps",
+        "url": "https://www.google.com/maps/search/%s/"
+    },
+    {
+        "iconPath": ":google_translate",
+        "id": "bc100c41",
+        "name": "Google Translate",
+        "trigger": "translate",
+        "url": "https://translate.google.com/?text=%s"
+    }
+]
