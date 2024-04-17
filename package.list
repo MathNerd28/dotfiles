@@ -8,7 +8,6 @@ batsignal
 bind
 brightnessctl
 chrony
-cloudflare-warp-bin
 code
 code-marketplace
 cpio
@@ -89,7 +88,6 @@ wireplumber
 wlr-randr
 xdg-desktop-portal-hyprland
 yay
-yay-debug
 zip
 zoom
 zsh
