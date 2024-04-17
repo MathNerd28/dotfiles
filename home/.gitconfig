@@ -9,3 +9,6 @@
 [user]
 	email = xander.bhalla@gmail.com
 	name = Alexander Bhalla
+	signingkey = 94E2C7BAD0F291B7
+[commit]
+	gpgsign = true
