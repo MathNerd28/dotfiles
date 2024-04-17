@@ -8,7 +8,7 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(colorize git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(colorize zsh-autosuggestions zsh-syntax-highlighting)
 zstyle ':omz:update' mode reminder
 
 source $ZSH/oh-my-zsh.sh
