@@ -58,6 +58,7 @@ pipewire-alsa
 pipewire-audio
 pipewire-pulse
 pipewire-v4l2
+pkgfile
 plex-media-player
 polkit-gnome
 postgresql

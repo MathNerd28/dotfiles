@@ -8,10 +8,15 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(colorize zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  command-not-found
+)
 zstyle ':omz:update' mode reminder
 
 source $ZSH/oh-my-zsh.sh
+unsetopt correct_all
 
 export EDITOR=code
 export ARCHFLAGS="-arch x86_64"
