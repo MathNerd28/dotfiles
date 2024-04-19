@@ -4,8 +4,8 @@
 
 ; Date/Time
 (defpoll time_bar
-  :interval "100ms"
-  "date '+%A %B %d, %Y %r'"
+  :interval "1s"
+  "date '+%A %B %d, %Y %I:%M:%S %p'"
 )
 
 ; Battery
@@ -68,6 +68,7 @@
         :class "button"
         (box
           :class "workspace_entry ${workspace.id == hyprland_active_workspace ? "active" : "inactive"} ${workspace.windows > 0 ? "occupied" : "empty"}"
+          :width 12
           (label
             :text "${workspace.id}"
           )
