@@ -16,12 +16,15 @@ dhcpcd
 docker-desktop
 dolphin-emu
 easyeffects
+eclipse-java
 eww
 firefox
 fprintd
 fwupd
 git
 github-cli
+gnome-keyring
+gradle
 gtk3
 hypridle
 hyprland
@@ -43,6 +46,7 @@ linux
 linux-firmware
 linux-headers
 lvm2
+mailspring
 man-db
 mesa-vdpau
 nano
@@ -50,6 +54,11 @@ noto-fonts
 npm
 obs-studio
 onlyoffice-bin
+openjdk-src
+openjdk11-src
+openjdk17-src
+openjdk21-src
+openjdk8-src
 otf-firamono-nerd
 otf-font-awesome
 pamixer
@@ -73,7 +82,6 @@ socat
 supabase-bin
 swaylock-effects
 swaync
-thunderbird
 ttf-fira-code
 ttf-firacode-nerd
 ttf-roboto-mono
