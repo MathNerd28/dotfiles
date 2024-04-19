@@ -12,6 +12,7 @@ plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
   command-not-found
+  z
 )
 zstyle ':omz:update' mode reminder
 
