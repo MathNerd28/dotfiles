@@ -10,7 +10,9 @@
   "editor.find.seedSearchStringFromSelection": "selection",
   "editor.fontFamily": "'FiraCode Nerd Font'",
   "editor.fontLigatures": "'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'cv02', 'cv16', 'cv30', 'zero'",
+  "editor.fontSize": 15,
   "editor.fontWeight": "500",
+  "editor.glyphMargin": false,
   "editor.guides.bracketPairs": true,
   "editor.guides.bracketPairsHorizontal": false,
   "editor.lightbulb.enabled": "off",
@@ -44,8 +46,15 @@
   "files.autoSaveDelay": 250,
   "files.defaultLanguage": "${activeEditorLanguage}",
   "files.insertFinalNewline": true,
+  "files.participants.timeout": 0,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
+  "gradle.reuseTerminals": "all",
+  "java.compile.nullAnalysis.mode": "automatic",
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.format.settings.url": "/home/xander/.vscode-oss/eclipse-java-formatter-settings.xml",
+  "java.import.gradle.home": "/usr/bin/gradle",
+  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx8G -Xms100m -Xlog:disable",
   "openapi.defaultPreviewRenderer": "redoc",
   "openapi.securityAuditToken": "CiACv26tm0g9KeJFS0QsVm4VJhhboGJZHkMc5+f9mNOGHRIYHYqmozOsof5M6hQK6DTHTxufLk+S9H3gGnazeG/Yd/01mctXPHPyOcJHF3O0B4R1uN8cfgVozwQ64bVI/B+hxqqSHg7aGvHAbNMwZipXYJxC2qVtTYTU3SpKw0nuavV4hsxGHwW3zW4BE5dCih4KWMC4S3LnkNZ7YNEOh0MNWzpUc0Z7aPO/Hmx2zmcwRzId",
   "redhat.telemetry.enabled": false,
@@ -54,6 +63,449 @@
   "search.showLineNumbers": true,
   "search.smartCase": true,
   "security.workspace.trust.enabled": false,
+  "sonarlint.rules": {
+    "java:NoSonar": {
+      "level": "on"
+    },
+    "java:S103": {
+      "level": "on"
+    },
+    "java:S104": {
+      "level": "on"
+    },
+    "java:S105": {
+      "level": "on"
+    },
+    "java:S106": {
+      "level": "off"
+    },
+    "java:S1067": {
+      "level": "on"
+    },
+    "java:S109": {
+      "level": "off"
+    },
+    "java:S1105": {
+      "level": "on"
+    },
+    "java:S1106": {
+      "level": "off"
+    },
+    "java:S1107": {
+      "level": "on"
+    },
+    "java:S1108": {
+      "level": "off"
+    },
+    "java:S1109": {
+      "level": "on"
+    },
+    "java:S1114": {
+      "level": "on"
+    },
+    "java:S1120": {
+      "level": "on"
+    },
+    "java:S113": {
+      "level": "on"
+    },
+    "java:S1132": {
+      "level": "on"
+    },
+    "java:S1135": {
+      "level": "off"
+    },
+    "java:S1142": {
+      "level": "on"
+    },
+    "java:S1147": {
+      "level": "on"
+    },
+    "java:S1151": {
+      "level": "on"
+    },
+    "java:S1160": {
+      "level": "on"
+    },
+    "java:S1162": {
+      "level": "on"
+    },
+    "java:S1166": {
+      "level": "on"
+    },
+    "java:S1176": {
+      "level": "on"
+    },
+    "java:S118": {
+      "level": "on"
+    },
+    "java:S1188": {
+      "level": "on"
+    },
+    "java:S1194": {
+      "level": "on"
+    },
+    "java:S1200": {
+      "level": "on"
+    },
+    "java:S121": {
+      "level": "on"
+    },
+    "java:S1213": {
+      "level": "on"
+    },
+    "java:S122": {
+      "level": "off"
+    },
+    "java:S1228": {
+      "level": "on"
+    },
+    "java:S1244": {
+      "level": "on"
+    },
+    "java:S1258": {
+      "level": "on"
+    },
+    "java:S126": {
+      "level": "off"
+    },
+    "java:S1309": {
+      "level": "off"
+    },
+    "java:S1310": {
+      "level": "on"
+    },
+    "java:S1312": {
+      "level": "on"
+    },
+    "java:S1314": {
+      "level": "on"
+    },
+    "java:S1315": {
+      "level": "on"
+    },
+    "java:S134": {
+      "level": "on"
+    },
+    "java:S135": {
+      "level": "off"
+    },
+    "java:S138": {
+      "level": "on"
+    },
+    "java:S139": {
+      "level": "off"
+    },
+    "java:S1448": {
+      "level": "on"
+    },
+    "java:S1449": {
+      "level": "off"
+    },
+    "java:S1451": {
+      "level": "off"
+    },
+    "java:S1541": {
+      "level": "on"
+    },
+    "java:S1610": {
+      "level": "on"
+    },
+    "java:S1641": {
+      "level": "on"
+    },
+    "java:S1694": {
+      "level": "on"
+    },
+    "java:S1695": {
+      "level": "on"
+    },
+    "java:S1696": {
+      "level": "on"
+    },
+    "java:S1698": {
+      "level": "on"
+    },
+    "java:S1699": {
+      "level": "on"
+    },
+    "java:S1711": {
+      "level": "on"
+    },
+    "java:S1774": {
+      "level": "off"
+    },
+    "java:S1820": {
+      "level": "on"
+    },
+    "java:S1821": {
+      "level": "on"
+    },
+    "java:S1939": {
+      "level": "on"
+    },
+    "java:S1941": {
+      "level": "on"
+    },
+    "java:S1942": {
+      "level": "on"
+    },
+    "java:S1943": {
+      "level": "on"
+    },
+    "java:S1996": {
+      "level": "on"
+    },
+    "java:S2039": {
+      "level": "on"
+    },
+    "java:S2047": {
+      "level": "on"
+    },
+    "java:S2057": {
+      "level": "on"
+    },
+    "java:S2059": {
+      "level": "on"
+    },
+    "java:S2063": {
+      "level": "on"
+    },
+    "java:S2096": {
+      "level": "on"
+    },
+    "java:S2131": {
+      "level": "on"
+    },
+    "java:S2141": {
+      "level": "on"
+    },
+    "java:S2143": {
+      "level": "on"
+    },
+    "java:S2148": {
+      "level": "on"
+    },
+    "java:S2156": {
+      "level": "on"
+    },
+    "java:S2162": {
+      "level": "on"
+    },
+    "java:S2164": {
+      "level": "on"
+    },
+    "java:S2165": {
+      "level": "on"
+    },
+    "java:S2196": {
+      "level": "on"
+    },
+    "java:S2197": {
+      "level": "on"
+    },
+    "java:S2203": {
+      "level": "on"
+    },
+    "java:S2208": {
+      "level": "on"
+    },
+    "java:S2211": {
+      "level": "on"
+    },
+    "java:S2221": {
+      "level": "on"
+    },
+    "java:S2250": {
+      "level": "on"
+    },
+    "java:S2260": {
+      "level": "on"
+    },
+    "java:S2301": {
+      "level": "on"
+    },
+    "java:S2308": {
+      "level": "on"
+    },
+    "java:S2309": {
+      "level": "on"
+    },
+    "java:S2325": {
+      "level": "on"
+    },
+    "java:S2333": {
+      "level": "on"
+    },
+    "java:S2384": {
+      "level": "on"
+    },
+    "java:S2444": {
+      "level": "on"
+    },
+    "java:S2658": {
+      "level": "on"
+    },
+    "java:S2693": {
+      "level": "on"
+    },
+    "java:S2694": {
+      "level": "on"
+    },
+    "java:S2698": {
+      "level": "on"
+    },
+    "java:S2701": {
+      "level": "on"
+    },
+    "java:S2959": {
+      "level": "on"
+    },
+    "java:S2972": {
+      "level": "on"
+    },
+    "java:S2973": {
+      "level": "on"
+    },
+    "java:S2974": {
+      "level": "on"
+    },
+    "java:S3030": {
+      "level": "on"
+    },
+    "java:S3032": {
+      "level": "on"
+    },
+    "java:S3047": {
+      "level": "on"
+    },
+    "java:S3052": {
+      "level": "on"
+    },
+    "java:S3242": {
+      "level": "on"
+    },
+    "java:S3254": {
+      "level": "on"
+    },
+    "java:S3306": {
+      "level": "on"
+    },
+    "java:S3366": {
+      "level": "on"
+    },
+    "java:S3414": {
+      "level": "on"
+    },
+    "java:S3437": {
+      "level": "on"
+    },
+    "java:S3553": {
+      "level": "on"
+    },
+    "java:S3578": {
+      "level": "on"
+    },
+    "java:S3658": {
+      "level": "on"
+    },
+    "java:S3725": {
+      "level": "on"
+    },
+    "java:S3749": {
+      "level": "on"
+    },
+    "java:S3750": {
+      "level": "on"
+    },
+    "java:S3937": {
+      "level": "on"
+    },
+    "java:S4174": {
+      "level": "on"
+    },
+    "java:S4248": {
+      "level": "on"
+    },
+    "java:S4266": {
+      "level": "on"
+    },
+    "java:S4288": {
+      "level": "on"
+    },
+    "java:S4551": {
+      "level": "on"
+    },
+    "java:S4604": {
+      "level": "on"
+    },
+    "java:S4605": {
+      "level": "on"
+    },
+    "java:S4926": {
+      "level": "on"
+    },
+    "java:S5128": {
+      "level": "on"
+    },
+    "java:S5194": {
+      "level": "on"
+    },
+    "java:S5612": {
+      "level": "on"
+    },
+    "java:S5793": {
+      "level": "on"
+    },
+    "java:S5867": {
+      "level": "on"
+    },
+    "java:S5970": {
+      "level": "on"
+    },
+    "java:S5977": {
+      "level": "on"
+    },
+    "java:S5979": {
+      "level": "on"
+    },
+    "java:S6073": {
+      "level": "on"
+    },
+    "java:S6211": {
+      "level": "on"
+    },
+    "java:S6212": {
+      "level": "on"
+    },
+    "java:S6374": {
+      "level": "on"
+    },
+    "java:S6411": {
+      "level": "on"
+    },
+    "java:S6889": {
+      "level": "on"
+    },
+    "java:S6904": {
+      "level": "on"
+    },
+    "java:S818": {
+      "level": "on"
+    },
+    "java:S864": {
+      "level": "on"
+    },
+    "java:S881": {
+      "level": "on"
+    },
+    "java:S888": {
+      "level": "on"
+    },
+    "java:S923": {
+      "level": "on"
+    }
+  },
   "sortJSON.contextMenu": {
     "sortJSON": true,
     "sortJSONAlphaNum": false,
@@ -67,8 +519,12 @@
     "sortJSONValuesReverse": false
   },
   "terminal.external.linuxExec": "kitty",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorWidth": 2,
   "testing.countBadge": "off",
   "testing.openTesting": "neverOpen",
+  "window.menuBarVisibility": "hidden",
   "window.title": "VSCode${separator}${rootName}${separator}${activeEditorShort}${separator}",
   "workbench.colorCustomizations": {
     "editorBracketHighlight.foreground1": "#ff0000",
@@ -84,9 +540,5 @@
   "workbench.editor.wrapTabs": true,
   "workbench.enableExperiments": false,
   "workbench.startupEditor": "none",
-  "workbench.tips.enabled": false,
-  "window.menuBarVisibility": "toggle",
-  "errorLens.gutterIconsEnabled": true,
-  "editor.glyphMargin": false,
-  "editor.fontSize": 15
+  "workbench.tips.enabled": false
 }
