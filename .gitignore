@@ -8,6 +8,7 @@
 # Include these, no special handling needed
 !.config/albert
 !.config/avizo
+!.config/dunst
 !.config/eww
 !.config/fontconfig
 !.config/gtk-3.0
@@ -38,4 +39,3 @@
 # -----
 # $HOME
 # -----
-
