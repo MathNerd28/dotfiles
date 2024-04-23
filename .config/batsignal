@@ -1,9 +1,24 @@
+# Notifications expire
 -e
 
+# Three low battery levels
 -w 20
 -W
-Low Battery
+is low
 
 -c 10
 -C
-Low Battery
+is very low
+
+# Command for low/critical levels
+-M
+notify-send -u critical --app-name Battery "is at %$2s"
+
+# Danger takes a command instead
+-d 2
+-D
+notify-send -u critical --app-name Battery "is critical" "Battery level: 2%"
+
+# App name in notifications
+-a
+Battery
