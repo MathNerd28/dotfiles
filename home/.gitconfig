@@ -12,3 +12,10 @@
 	signingkey = 94E2C7BAD0F291B7
 [commit]
 	gpgsign = true
+[diff]
+	colorMoved = true
+	algorithm = minimal
+[push]
+	autoSetupRemote = true
+[pull]
+	ff = only
