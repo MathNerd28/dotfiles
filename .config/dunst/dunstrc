@@ -1,0 +1,117 @@
+# See dunst(5) for all configuration options
+
+[global]
+  monitor = eDP-1
+  follow = none
+
+  width = (0, 600)
+  height = 300
+  origin = top-right
+  offset = 10x10
+  scale = 0
+
+  notification_limit = 21
+  stack_duplicates = true
+  hide_duplicate_count = false
+  sort = update
+  indicate_hidden = yes
+
+  progress_bar = true
+  progress_bar_height = 16
+  progress_bar_frame_width = 1
+  progress_bar_min_width = 100
+  progress_bar_max_width = 600
+  progress_bar_corner_radius = 8
+  progress_bar_corners = all
+
+  icon_corner_radius = 0
+  icon_corners = all
+
+  separator_height = 2
+  separator_color = frame
+  gap_size = 2
+
+  padding = 8
+  horizontal_padding = 8
+  text_icon_padding = 0
+
+  frame_width = 1
+  frame_color = "#aaaaaa"
+
+  idle_threshold = 2m
+
+  markup = full
+  format = "<b>%a</b> %s %p\n%b"
+  ignore_newline = no
+  show_indicators = no
+  ellipsize = middle
+
+  font = Noto Sans 12
+  line_height = 0
+  alignment = left
+  vertical_alignment = top
+
+  show_age_threshold = 1m
+  ignore_dbusclose = false
+
+  enable_recursive_icon_lookup = true
+  icon_theme = Adwaita
+  icon_position = left
+  min_icon_size = 32
+  max_icon_size = 128
+
+  sticky_history = no
+  history_length = 20
+
+  browser = /usr/bin/xdg-open
+  always_run_script = true
+
+  corner_radius = 8
+  corners = all
+
+  layer = overlay
+  force_xwayland = false
+
+  mouse_left_click = close_current
+  mouse_middle_click = close_all
+  mouse_right_click = context
+
+# Custom rules
+
+[firefox_downloads]
+  appname = Firefox
+  summary = *Download Complete*
+
+  set_category = transfer.complete
+  urgency = low
+
+[volume]
+  appname = Volume
+
+  set_stack_tag = volume
+  urgency = low
+
+[brightness]
+  appname = Brightness
+
+  set_stack_tag = brightness
+  urgency = low
+
+# Urgencies
+
+[urgency_low]
+  background = "#4466ff"
+  foreground = "#ffffff"
+  timeout = 10
+
+[urgency_normal]
+  background = "#8800aa"
+  foreground = "#ffffff"
+  timeout = 10
+  override_pause_level = 30
+
+[urgency_critical]
+  background = "#900000"
+  foreground = "#ffffff"
+  timeout = 0
+  override_pause_level = 60
