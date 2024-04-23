@@ -15,6 +15,7 @@ deno
 dhcpcd
 docker-desktop
 dolphin-emu
+dunst
 easyeffects
 eclipse-java
 eww
@@ -61,6 +62,8 @@ openjdk21-src
 openjdk8-src
 otf-firamono-nerd
 otf-font-awesome
+paccache-hook
+pacman-contrib
 pamixer
 pipewire
 pipewire-alsa
@@ -81,7 +84,6 @@ slack-desktop
 socat
 supabase-bin
 swaylock-effects
-swaync
 ttf-fira-code
 ttf-firacode-nerd
 ttf-roboto-mono
@@ -95,6 +97,7 @@ wayland-pipewire-idle-inhibit
 wireless-regdb
 wireplumber
 wlr-randr
+words
 xdg-desktop-portal-hyprland
 yay
 zip
