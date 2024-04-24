@@ -97,6 +97,12 @@
   set_stack_tag = brightness
   urgency = low
 
+[battery]
+  appname = Battery
+
+  set_stack_tag = battery
+  urgency = critical
+
 # Urgencies
 
 [urgency_low]
