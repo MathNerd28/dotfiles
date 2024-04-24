@@ -40,7 +40,7 @@ getIcon() {
 		esac
 	fi
 
-	echo $icon;
+	echo "$icon"
 }
 
 getCapacity() {
@@ -48,9 +48,9 @@ getCapacity() {
 }
 
 getStatus() {
-	if [ $percent -le 5 ]; then echo "Critical"
-	elif [ $percent -le 100 ]; then echo "Low"
-	else echo $status
+	if [ "$status" = "Charging" ]; then echo "$status"
+	elif [ $capacity -le 20 ]; then echo "Low"
+	else echo "$status"
 	fi
 }
 

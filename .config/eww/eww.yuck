@@ -10,15 +10,15 @@
 
 ; Battery
 (defpoll battery_percent
-  :interval "1s"
+  :interval "5s"
   "sh ~/.config/eww/scripts/battery percent"
 )
 (defpoll battery_icon
-  :interval "1s"
+  :interval "5s"
   "sh ~/.config/eww/scripts/battery icon"
 )
 (defpoll battery_status
-  :interval "1s"
+  :interval "5s"
   "sh ~/.config/eww/scripts/battery status"
 )
 (defwidget battery_bar []

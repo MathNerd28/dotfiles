@@ -26,6 +26,10 @@
   color: limegreen;
 }
 
+.battery_bar.Low {
+  color: red;
+}
+
 .zero {
   color: rgba(0,0,0,0);
 }
