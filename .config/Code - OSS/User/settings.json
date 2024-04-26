@@ -62,13 +62,13 @@
     "tags"
   ],
   "gitlens.statusBar.enabled": false,
-  "gradle.reuseTerminals": "all",
   "java.compile.nullAnalysis.mode": "automatic",
   "java.completion.filteredTypes": [],
   "java.configuration.updateBuildConfiguration": "automatic",
   "java.format.settings.url": "/home/xander/.vscode-oss/eclipse-java-formatter-settings.xml",
   "java.import.gradle.home": "/usr/bin/gradle",
   "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx8G -Xms100m -Xlog:disable",
+  "java.settings.url": "/home/xander/git/dotfiles/.vscode-oss/java-settings.prefs",
   "openapi.defaultPreviewRenderer": "redoc",
   "openapi.securityAuditToken": "CiACv26tm0g9KeJFS0QsVm4VJhhboGJZHkMc5+f9mNOGHRIYHYqmozOsof5M6hQK6DTHTxufLk+S9H3gGnazeG/Yd/01mctXPHPyOcJHF3O0B4R1uN8cfgVozwQ64bVI/B+hxqqSHg7aGvHAbNMwZipXYJxC2qVtTYTU3SpKw0nuavV4hsxGHwW3zW4BE5dCih4KWMC4S3LnkNZ7YNEOh0MNWzpUc0Z7aPO/Hmx2zmcwRzId",
   "redhat.telemetry.enabled": false,
@@ -552,6 +552,35 @@
   "terminal.integrated.persistentSessionReviveProcess": "never",
   "testing.countBadge": "off",
   "testing.openTesting": "neverOpen",
+  "todohighlight.defaultStyle": {
+    "backgroundColor": "rgba(0,0,0,0)",
+    "color": "#0af"
+  },
+  "todohighlight.enableDiagnostics": true,
+  "todohighlight.include": [
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.html",
+    "**/*.css",
+    "**/*.scss",
+    "**/*.php",
+    "**/*.rb",
+    "**/*.txt",
+    "**/*.mdown",
+    "**/*.md",
+    "**/*.java"
+  ],
+  "todohighlight.keywords": [
+    {
+      "diagnosticSeverity": "information",
+      "text": "ignored",
+      "regex": {
+        "pattern": "(TODO|FIXME)"
+      }
+    }
+  ],
   "window.menuBarVisibility": "hidden",
   "window.title": "VSCode${separator}${rootName}${separator}${activeEditorShort}${separator}",
   "workbench.colorCustomizations": {
@@ -568,5 +597,8 @@
   "workbench.editor.wrapTabs": true,
   "workbench.enableExperiments": false,
   "workbench.startupEditor": "none",
-  "workbench.tips.enabled": false
+  "workbench.tips.enabled": false,
+  "workbench.editor.editorActionsLocation": "hidden",
+  "workbench.editor.doubleClickTabToToggleEditorGroupSizes": "off",
+  "workbench.editor.highlightModifiedTabs": true
 }
