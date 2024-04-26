@@ -21,5 +21,3 @@ unsetopt correct_all
 
 export EDITOR=code
 export ARCHFLAGS="-arch x86_64"
-
-export PGDATA=/var/lib/postgres/data
