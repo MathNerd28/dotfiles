@@ -12,7 +12,7 @@
 }
 
 .workspace_entry.empty {
-  color: rgba(255,255,255,0.5);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .workspace_entry.active {
@@ -24,12 +24,15 @@
 
 .battery_bar.Charging {
   color: limegreen;
+  font-weight: bold;
 }
 
 .battery_bar.Low {
   color: red;
+  font-weight: bold;
 }
 
 .zero {
-  color: rgba(0,0,0,0);
+  color: rgba(0, 0, 0, 0);
+  font-size: 0;
 }
