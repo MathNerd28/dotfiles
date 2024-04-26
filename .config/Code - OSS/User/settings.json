@@ -23,6 +23,7 @@
   "editor.scrollBeyondLastLine": false,
   "editor.scrollbar.horizontal": "hidden",
   "editor.scrollbar.verticalScrollbarSize": 0,
+  "editor.showFoldingControls": "never",
   "editor.stickyTabStops": true,
   "editor.suggest.localityBonus": true,
   "editor.suggest.preview": true,
@@ -42,6 +43,9 @@
   "explorer.confirmDragAndDrop": false,
   "explorer.incrementalNaming": "smart",
   "extensions.ignoreRecommendations": true,
+  "files.associations": {
+    "dunstrc": "ini"
+  },
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 250,
   "files.defaultLanguage": "${activeEditorLanguage}",
@@ -49,8 +53,18 @@
   "files.participants.timeout": 0,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.graph.layout": "editor",
+  "gitlens.graph.minimap.additionalTypes": [
+    "localBranches",
+    "stashes",
+    "remoteBranches",
+    "tags"
+  ],
+  "gitlens.statusBar.enabled": false,
   "gradle.reuseTerminals": "all",
   "java.compile.nullAnalysis.mode": "automatic",
+  "java.completion.filteredTypes": [],
   "java.configuration.updateBuildConfiguration": "automatic",
   "java.format.settings.url": "/home/xander/.vscode-oss/eclipse-java-formatter-settings.xml",
   "java.import.gradle.home": "/usr/bin/gradle",
@@ -106,11 +120,17 @@
     "java:S1120": {
       "level": "on"
     },
+    "java:S1128": {
+      "level": "off"
+    },
     "java:S113": {
       "level": "on"
     },
     "java:S1132": {
       "level": "on"
+    },
+    "java:S1134": {
+      "level": "off"
     },
     "java:S1135": {
       "level": "off"
@@ -155,6 +175,9 @@
       "level": "on"
     },
     "java:S122": {
+      "level": "off"
+    },
+    "java:S1220": {
       "level": "off"
     },
     "java:S1228": {
@@ -279,6 +302,9 @@
     },
     "java:S2141": {
       "level": "on"
+    },
+    "java:S2142": {
+      "level": "off"
     },
     "java:S2143": {
       "level": "on"
@@ -504,18 +530,6 @@
     },
     "java:S923": {
       "level": "on"
-    },
-    "java:S1128": {
-      "level": "off"
-    },
-    "java:S1220": {
-      "level": "off"
-    },
-    "java:S2142": {
-      "level": "off"
-    },
-    "java:S1134": {
-      "level": "off"
     }
   },
   "sortJSON.contextMenu": {
@@ -534,6 +548,8 @@
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.cursorWidth": 2,
+  "terminal.integrated.enablePersistentSessions": false,
+  "terminal.integrated.persistentSessionReviveProcess": "never",
   "testing.countBadge": "off",
   "testing.openTesting": "neverOpen",
   "window.menuBarVisibility": "hidden",
@@ -552,9 +568,5 @@
   "workbench.editor.wrapTabs": true,
   "workbench.enableExperiments": false,
   "workbench.startupEditor": "none",
-  "workbench.tips.enabled": false,
-  "files.associations": {
-    "dunstrc": "ini"
-  },
-  "java.completion.filteredTypes": []
+  "workbench.tips.enabled": false
 }
