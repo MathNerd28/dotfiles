@@ -227,7 +227,7 @@
       "level": "on"
     },
     "java:S1699": {
-      "level": "on"
+      "level": "off"
     },
     "java:S1711": {
       "level": "on"
@@ -392,7 +392,7 @@
       "level": "on"
     },
     "java:S3366": {
-      "level": "on"
+      "level": "off"
     },
     "java:S3414": {
       "level": "on"
@@ -555,5 +555,6 @@
   "workbench.tips.enabled": false,
   "files.associations": {
     "dunstrc": "ini"
-  }
+  },
+  "java.completion.filteredTypes": []
 }
