@@ -28,6 +28,7 @@ gradle
 gtk3
 hypridle
 hyprland
+hyprlock
 hyprpaper
 iwd
 jdk-openjdk
@@ -63,6 +64,8 @@ otf-firamono-nerd
 otf-font-awesome
 paccache-hook
 pacman-contrib
+pam-fprint-grosshack
+pam-fprint-grosshack-debug
 pamixer
 pipewire
 pipewire-alsa
@@ -82,7 +85,6 @@ rustup
 slack-desktop
 socat
 supabase-bin
-swaylock-effects
 ttf-fira-code
 ttf-firacode-nerd
 ttf-roboto-mono
