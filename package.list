@@ -65,7 +65,6 @@ otf-font-awesome
 paccache-hook
 pacman-contrib
 pam-fprint-grosshack
-pam-fprint-grosshack-debug
 pamixer
 pipewire
 pipewire-alsa
