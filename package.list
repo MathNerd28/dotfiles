@@ -10,6 +10,8 @@ chrony
 code
 code-marketplace
 cpio
+cups
+cups-pdf
 deno
 dhcpcd
 docker-desktop
@@ -53,6 +55,7 @@ mesa-vdpau
 nano
 noto-fonts
 npm
+nss-mdns
 obs-studio
 onlyoffice-bin
 openjdk-src
@@ -72,7 +75,6 @@ pipewire-audio
 pipewire-pulse
 pipewire-v4l2
 pkgfile
-plex-media-player
 polkit-gnome
 postgresql
 power-profiles-daemon
