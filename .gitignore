@@ -3,38 +3,38 @@
 # -------
 
 # Explicitly include everything
-.config/*
+home/.config/*
 
 # Include these, no special handling needed
-!.config/albert
-!.config/avizo
-!.config/dunst
-!.config/eww
-!.config/fontconfig
-!.config/gtk-3.0
-!.config/hypr
-!.config/kitty
-!.config/procps
-!.config/qt5ct
-!.config/qt6ct
-!.config/swaync
-!.config/albert.conf
-!.config/batsignal
-!.config/code-flags.conf
-!.config/electron-flags.conf
+!home/.config/albert
+!home/.config/avizo
+!home/.config/dunst
+!home/.config/eww
+!home/.config/fontconfig
+!home/.config/gtk-3.0
+!home/.config/hypr
+!home/.config/kitty
+!home/.config/procps
+!home/.config/qt5ct
+!home/.config/qt6ct
+!home/.config/swaync
+!home/.config/albert.conf
+!home/.config/batsignal
+!home/.config/code-flags.conf
+!home/.config/electron-flags.conf
 
 # Exclude GitHub oauth token
-!.config/gh
-.config/gh/hosts.yml
+!home/.config/gh
+home/.config/gh/hosts.yml
 
 # Only include VSCode user settings
-!.config/Code - OSS
-.config/Code - OSS/*
-!.config/Code - OSS/User
-.config/Code - OSS/User/*
-!.config/Code - OSS/User/settings.json
-!.config/Code - OSS/User/keybindings.json
-!.config/Code - OSS/User/snippets
+!home/.config/Code - OSS
+home/.config/Code - OSS/*
+!home/.config/Code - OSS/User
+home/.config/Code - OSS/User/*
+!home/.config/Code - OSS/User/settings.json
+!home/.config/Code - OSS/User/keybindings.json
+!home/.config/Code - OSS/User/snippets
 
 # -----
 # $HOME
