@@ -3,83 +3,59 @@
 DOTFILES_DIR="$(pwd)"
 LS="ls -A"
 
-# Script dependencies
+findFiles() {
+  find "$1" -type f -printf '%P\n'
+}
+
 SCRIPT_DEPENDENCIES="yay findutils"
 if ! pacman -Qqi $SCRIPT_DEPENDENCIES >/dev/null; then
   echo "Need to install packages before proceeding"
   sudo pacman -Sy --needed $SCRIPT_DEPENDENCIES
 fi
 
-# # Install packages
-# if ! cat package.list | xargs yay -Qqi >/dev/null; then
-#   echo "Installing dependencies..."
-#   cat package.list | xargs yay -Syq --needed
-# else
-#   echo "All dependencies present, skipping"
-# fi
-
-# BACKUP
-echo "Backing up current configuration..."
+if ! cat package.list | xargs yay -Qqi >/dev/null; then
+  echo "Installing dependencies..."
+  cat package.list | xargs yay -Syq --needed
+fi
 
 backup() {
-  # Only if file/directory exists
-  if [ -d "$1" ] || [ -f "$1" ]; then
-    echo "Moving $1 to $1.bak"
-    mv "$1" "$1.bak"
-  else
-    echo "Skipping $1"
-  fi
-}
-
-backupSudo() {
-  if [ -d "$1" ] || [ -f "$1" ]; then
-    echo "Backing up $1 to $1.bak"
-    sudo mv "$1" "$1.bak"
-  else
-    echo "Skipping backup of $1"
-  fi
+  for file in $(findFiles "$1"); do
+    if [ -d "$2/$file" ] || [ -f "$2/$file" ]; then
+      echo "Moving $2/$file to $file.bak"
+      if [ -z $3 ]; then
+        mv "$2/$file" "$2/$file.bak"
+      else
+        sudo mv "$2/$file" "$2/$file.bak"
+      fi
+    else
+      echo "$2/$file not present, skipping"
+    fi
+  done
 }
 
 OIFS="$IFS"
 IFS=$'\n'
 
-for f in $(find "$DOTFILES_DIR/home" -type f -printf '%P\n'); do
-  echo $f
-  backup "$HOME/$f"
-done
-
-for f in $(find "$DOTFILES_DIR/config" -type f -printf '%P\n'); do
-  backup "$HOME/.config/$f"
-done
-
-for f in $(find "$DOTFILES_DIR/etc" -type f -printf '%P\n'); do
-  backupSudo "/etc/$f"
-done
-
-echo "Backup complete"
-
-# Link everything to its proper place
-echo "Linking dotfiles..."
+backup "$DOTFILES_DIR/config" "$HOME/.config"
+backup "$DOTFILES_DIR/home" "$HOME"
+backup "$DOTFILES_DIR/etc" "/etc" 1
 
 linkFiles() {
-  for file in $(find "$1" -type f -printf '%P\n'); do
+  for file in $(findFiles "$1"); do
     echo "Linking $1/$file to $2/$file"
-    mkdir -p "$(dirname "$2/$file")"
-    ln -s "$1/$file" "$2/$file"
-  done
-}
-
-linkFilesSudo() {
-  for file in $(find "$1" -type f -printf '%P\n'); do
-    echo "Linking $1/$file to $2/$file"
-    sudo mkdir -p "$(dirname "$2/file")"
-    sudo ln -s "$1/$file" "$2/$file"
+    if [ -z "$3" ]; then
+      mkdir -p "$(dirname "$2/$file")"
+      ln -s "$1/$file" "$2/$file"
+    else
+      sudo mkdir -p "$(dirname "$2/$file")"
+      sudo ln -s "$1/$file" "$2/$file"
+    fi
   done
 }
 
 linkFiles "$DOTFILES_DIR/home" "$HOME"
 linkFiles "$DOTFILES_DIR/config" "$HOME/.config"
-linkFilesSudo "$DOTFILES_DIR/etc" /etc
+linkFiles "$DOTFILES_DIR/etc" /etc 1
 
 IFS="$OIFS"
 
