@@ -1,16 +1,14 @@
 #!/usr/bin/sh
 
 DOTFILES_DIR="$(pwd)"
-LS="ls -A"
 
 findFiles() {
   find "$1" -type f -printf '%P\n'
 }
 
-SCRIPT_DEPENDENCIES="yay findutils"
-if ! pacman -Qqi $SCRIPT_DEPENDENCIES >/dev/null; then
-  echo "Need to install packages before proceeding"
-  sudo pacman -Sy --needed $SCRIPT_DEPENDENCIES
+if ! pacman -Qq yay >/dev/null; then
+  echo "Need to install yay before proceeding"
+  sudo pacman -Sy yay
 fi
 
 if ! cat package.list | xargs yay -Qqi >/dev/null; then
@@ -18,38 +16,37 @@ if ! cat package.list | xargs yay -Qqi >/dev/null; then
   cat package.list | xargs yay -Syq --needed
 fi
 
+OIFS="$IFS"
+IFS=$'\n'
+
 backup() {
+  SUDO=""
+  if ! [ -z $3 ]; then
+    SUDO="sudo"
+  fi
+
   for file in $(findFiles "$1"); do
-    if [ -d "$2/$file" ] || [ -f "$2/$file" ]; then
+    if [ -d "$2/$file" ] && [ -f "$2/$file" ]; then
       echo "Moving $2/$file to $file.bak"
-      if [ -z $3 ]; then
-        mv "$2/$file" "$2/$file.bak"
-      else
-        sudo mv "$2/$file" "$2/$file.bak"
-      fi
-    else
-      echo "$2/$file not present, skipping"
+      $SUDO mv "$2/$file" "$2/$file.bak"
     fi
   done
 }
-
-OIFS="$IFS"
-IFS=$'\n'
 
 backup "$DOTFILES_DIR/config" "$HOME/.config"
 backup "$DOTFILES_DIR/home" "$HOME"
 backup "$DOTFILES_DIR/etc" "/etc" 1
 
 linkFiles() {
+  SUDO=""
+  if ! [ -z $3 ]; then
+    SUDO="sudo"
+  fi
+
   for file in $(findFiles "$1"); do
     echo "Linking $1/$file to $2/$file"
-    if [ -z "$3" ]; then
-      mkdir -p "$(dirname "$2/$file")"
-      ln -s "$1/$file" "$2/$file"
-    else
-      sudo mkdir -p "$(dirname "$2/$file")"
-      sudo ln -s "$1/$file" "$2/$file"
-    fi
+    $SUDO mkdir -p "$(dirname "$2/$file")"
+    $SUDO ln -s "$1/$file" "$2/$file"
   done
 }
 
