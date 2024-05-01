@@ -26,7 +26,7 @@ backup() {
   fi
 
   for file in $(findFiles "$1"); do
-    if [ -d "$2/$file" ] && [ -f "$2/$file" ]; then
+    if [ -d "$2/$file" ] || [ -f "$2/$file" ]; then
       echo "Moving $2/$file to $file.bak"
       $SUDO mv "$2/$file" "$2/$file.bak"
     fi
