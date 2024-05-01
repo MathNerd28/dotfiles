@@ -22,6 +22,7 @@ eclipse-java
 eww
 firefox
 fprintd
+framework-system-git
 fwupd
 git
 github-cli
@@ -83,7 +84,6 @@ qt6ct
 radeontop
 reflector
 rustup
-slack-desktop
 socat
 supabase-bin
 ttf-fira-code
