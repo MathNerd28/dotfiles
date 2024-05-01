@@ -1,0 +1,11 @@
+[Trigger]
+Type = Path
+Operation = Install
+Operation = Upgrade
+Operation = Remove
+Target = *
+
+[Action]
+Description = Saving package list to dotfiles repo...
+When = PostTransaction
+Exec = /usr/bin/sh -c '/usr/bin/pacman -Qe | cut -d " " -f1 > /home/xander/git/dotfiles/package.list'
