@@ -94,7 +94,7 @@
       "level": "off"
     },
     "java:S1067": {
-      "level": "on"
+      "level": "off"
     },
     "java:S109": {
       "level": "off"
@@ -166,7 +166,7 @@
       "level": "on"
     },
     "java:S1200": {
-      "level": "on"
+      "level": "off"
     },
     "java:S121": {
       "level": "off"
@@ -214,13 +214,13 @@
       "level": "off"
     },
     "java:S138": {
-      "level": "on"
+      "level": "off"
     },
     "java:S139": {
       "level": "off"
     },
     "java:S1448": {
-      "level": "on"
+      "level": "off"
     },
     "java:S1449": {
       "level": "off"
@@ -229,7 +229,7 @@
       "level": "off"
     },
     "java:S1541": {
-      "level": "on"
+      "level": "off"
     },
     "java:S1610": {
       "level": "on"
@@ -259,7 +259,7 @@
       "level": "off"
     },
     "java:S1820": {
-      "level": "on"
+      "level": "off"
     },
     "java:S1821": {
       "level": "on"
@@ -388,7 +388,7 @@
       "level": "on"
     },
     "java:S2972": {
-      "level": "on"
+      "level": "off"
     },
     "java:S2973": {
       "level": "on"
@@ -406,7 +406,7 @@
       "level": "on"
     },
     "java:S3052": {
-      "level": "on"
+      "level": "off"
     },
     "java:S3242": {
       "level": "on"
@@ -530,6 +530,15 @@
     },
     "java:S923": {
       "level": "on"
+    },
+    "java:S2189": {
+      "level": "off"
+    },
+    "java:S6539": {
+      "level": "off"
+    },
+    "java:S3776": {
+      "level": "off"
     }
   },
   "sortJSON.contextMenu": {
