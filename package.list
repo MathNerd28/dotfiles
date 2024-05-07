@@ -76,6 +76,8 @@ pipewire-audio
 pipewire-pulse
 pipewire-v4l2
 pkgfile
+playerctl
+playerctld-systemd-unit
 polkit-gnome
 postgresql
 power-profiles-daemon
