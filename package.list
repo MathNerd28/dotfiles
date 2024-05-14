@@ -33,6 +33,7 @@ hypridle
 hyprland
 hyprlock
 hyprpaper
+hyprpicker
 iwd
 jdk-openjdk
 jdk11-openjdk
@@ -91,6 +92,7 @@ supabase-bin
 ttf-fira-code
 ttf-firacode-nerd
 ttf-roboto-mono
+udisks2
 unzip
 usbutils
 v4l2loopback-dkms
