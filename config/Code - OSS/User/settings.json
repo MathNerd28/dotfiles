@@ -529,7 +529,7 @@
       "level": "on"
     },
     "java:S923": {
-      "level": "on"
+      "level": "off"
     },
     "java:S2189": {
       "level": "off"
@@ -609,5 +609,7 @@
   "workbench.tips.enabled": false,
   "workbench.editor.editorActionsLocation": "hidden",
   "workbench.editor.doubleClickTabToToggleEditorGroupSizes": "off",
-  "workbench.editor.highlightModifiedTabs": true
+  "workbench.editor.highlightModifiedTabs": true,
+  "git.openRepositoryInParentFolders": "never",
+  "arduino.useArduinoCli": true
 }
