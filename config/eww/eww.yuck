@@ -4,7 +4,7 @@
 
 ; Date/Time
 (defpoll time_bar
-  :interval "1s"
+  :interval "0.1s"
   "date '+%A %B %-d %Y %-l:%M:%S %p'"
 )
 
