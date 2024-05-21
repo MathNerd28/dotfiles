@@ -19,46 +19,34 @@ fi
 OIFS="$IFS"
 IFS=$'\n'
 
-backup() {
-  SUDO=""
-  if ! [ -z $3 ]; then
-    SUDO="sudo"
-  fi
-
-  for file in $(findFiles "$1"); do
+backupFiles() {
+  for file in $(findFiles "$DOTFILES_DIR/$1"); do
     if [ -e "$2/$file" ] || [ -L "$2/$file" ]; then
       dir=$(dirname "$file")/
       name=$(basename "$file")
       if [ "$dir" = "./" ]; then
         dir=""
       fi
-      echo "Moving $2/$dir{$name => $name.bak}"
-      $SUDO mv "$2/$file" "$2/$file.bak"
+      echo "mv $2/$dir{$name => $name.bak}"
+      $3 mv "$2/$file" "$2/$file.bak"
     fi
   done
 }
 
-backup "$DOTFILES_DIR/config" "$HOME/.config"
-backup "$DOTFILES_DIR/home" "$HOME"
-backup "$DOTFILES_DIR/etc" "/etc" 1
+backupFiles home "$HOME"
+backupFiles etc /etc sudo
 
 linkFiles() {
-  SUDO=""
-  if ! [ -z $3 ]; then
-    SUDO="sudo"
-  fi
-
-  for file in $(findFiles "$1"); do
-    echo "Linking {$2 => $1}/$file"
-    $SUDO mkdir -p "$(dirname "$2/$file")"
-    $SUDO ln -s "$1/$file" "$2/$file"
+  for file in $(findFiles "$DOTFILES_DIR/$1"); do
+    echo "ln -s {$2 => ./$1}/$file"
+    $3 mkdir -p "$(dirname "$2/$file")"
+    $3 ln -s "$DOTFILES_DIR/$1/$file" "$2/$file"
   done
 }
 
-linkFiles "$DOTFILES_DIR/home" "$HOME"
-linkFiles "$DOTFILES_DIR/config" "$HOME/.config"
-linkFiles "$DOTFILES_DIR/etc" /etc 1
+linkFiles home "$HOME"
+linkFiles etc /etc sudo
 
 IFS="$OIFS"
 
-echo "Installation complete"
+echo "done"
