@@ -8,7 +8,9 @@ capacity="$(cat "$BATTERY/capacity")"
 # Using Material Design Icons
 # battery-{charging?}-{%}
 getIcon() {
-	if [ "$status" = "Charging" ]; then
+        if [ "$status" = "Not charging" ]; then
+		icon="󰂅"
+	elif [ "$status" = "Charging" ]; then
 		case "$capacity" in
 			[0-4]) icon="󰢟" ;;
 			[5-9]|1[0-4]) icon="󰢜" ;;
@@ -48,9 +50,10 @@ getCapacity() {
 }
 
 getStatus() {
-	if [ "$status" = "Charging" ]; then echo "$status"
+	if [ "$status" = "Charging" ]; then echo "Charging"
 	elif [ $capacity -le 20 ]; then echo "Low"
-	else echo "$status"
+	elif [ "$status" = "Not charging" ]; then echo "Charging"
+	else echo "Discharging"
 	fi
 }
 
