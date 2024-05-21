@@ -26,8 +26,13 @@ backup() {
   fi
 
   for file in $(findFiles "$1"); do
-    if [ -d "$2/$file" ] || [ -f "$2/$file" ]; then
-      echo "Moving $2/$file to $file.bak"
+    if [ -e "$2/$file" ] || [ -L "$2/$file" ]; then
+      dir=$(dirname "$file")/
+      name=$(basename "$file")
+      if [ "$dir" = "./" ]; then
+        dir=""
+      fi
+      echo "Moving $2/$dir{$name => $name.bak}"
       $SUDO mv "$2/$file" "$2/$file.bak"
     fi
   done
@@ -44,7 +49,7 @@ linkFiles() {
   fi
 
   for file in $(findFiles "$1"); do
-    echo "Linking $1/$file to $2/$file"
+    echo "Linking {$2 => $1}/$file"
     $SUDO mkdir -p "$(dirname "$2/$file")"
     $SUDO ln -s "$1/$file" "$2/$file"
   done
