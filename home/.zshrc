@@ -21,3 +21,10 @@ unsetopt correct_all
 
 export EDITOR=code
 export ARCHFLAGS="-arch x86_64"
+
+eval $(thefuck --alias)
+alias please="fc -ln -1 | xargs sudo"
+
+export XDG_SCREENSHOTS_DIR="$HOME/Downloads"
+
+export JAVA_HOME="/usr/lib/jvm/default"
