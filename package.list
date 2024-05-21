@@ -20,6 +20,7 @@ dunst
 easyeffects
 eclipse-java
 eww
+exfatprogs
 firefox
 fprintd
 framework-system-git
@@ -28,6 +29,8 @@ git
 github-cli
 gnome-keyring
 gradle
+grim
+grimblast-git
 gtk3
 hypridle
 hyprland
@@ -87,8 +90,10 @@ qt6ct
 radeontop
 reflector
 rustup
+slurp
 socat
 supabase-bin
+thefuck
 ttf-fira-code
 ttf-firacode-nerd
 ttf-roboto-mono
@@ -100,8 +105,10 @@ vdpauinfo
 vulkan-radeon
 vulkan-tools
 wayland-pipewire-idle-inhibit
+wev
 wireless-regdb
 wireplumber
+wl-clipboard
 wlr-randr
 words
 xdg-desktop-portal-hyprland
