@@ -28,3 +28,5 @@ alias please="fc -ln -1 | xargs sudo"
 export XDG_SCREENSHOTS_DIR="$HOME/Downloads"
 
 export JAVA_HOME="/usr/lib/jvm/default"
+
+alias start="hyprctl dispatch exec"
