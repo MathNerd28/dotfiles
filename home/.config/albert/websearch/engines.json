@@ -1,5 +1,6 @@
 [
     {
+        "fallback": false,
         "iconPath": ":github",
         "id": "d387a672",
         "name": "GitHub",
@@ -7,6 +8,7 @@
         "url": "https://github.com/search?utf8=✓&q=%s"
     },
     {
+        "fallback": true,
         "iconPath": ":google",
         "id": "fb9ae381",
         "name": "Google",
@@ -14,6 +16,7 @@
         "url": "https://www.google.com/search?q=%s"
     },
     {
+        "fallback": false,
         "iconPath": ":maps",
         "id": "614acbdc",
         "name": "Google Maps",
@@ -21,6 +24,7 @@
         "url": "https://www.google.com/maps/search/%s/"
     },
     {
+        "fallback": false,
         "iconPath": ":google_translate",
         "id": "bc100c41",
         "name": "Google Translate",
