@@ -1,8 +1,13 @@
 {
+  "[dart]": {
+    "editor.defaultFormatter": "Dart-Code.dart-code",
+    "editor.inlayHints.enabled": "offUnlessPressed"
+  },
   "breadcrumbs.enabled": false,
+  "dart.flutterHotReloadOnSave": "never",
+  "dart.sdkPath": "/home/xander/.cache/flutter_sdk/bin/cache/dart-sdk",
   "debug.autoExpandLazyVariables": true,
   "debug.saveBeforeStart": "nonUntitledEditorsInActiveGroup",
-  "debug.toolBarLocation": "docked",
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorSurroundingLines": 9999,
@@ -19,10 +24,9 @@
   "editor.minimap.showSlider": "always",
   "editor.minimap.size": "fit",
   "editor.padding.top": 8,
-  "editor.renderWhitespace": "trailing",
-  "editor.scrollBeyondLastLine": false,
   "editor.scrollbar.horizontal": "hidden",
   "editor.scrollbar.verticalScrollbarSize": 0,
+  "editor.scrollBeyondLastLine": false,
   "editor.showFoldingControls": "never",
   "editor.stickyTabStops": true,
   "editor.suggest.localityBonus": true,
@@ -53,15 +57,7 @@
   "files.participants.timeout": 0,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-  "gitlens.codeLens.enabled": false,
-  "gitlens.graph.layout": "editor",
-  "gitlens.graph.minimap.additionalTypes": [
-    "localBranches",
-    "stashes",
-    "remoteBranches",
-    "tags"
-  ],
-  "gitlens.statusBar.enabled": false,
+  "git.openRepositoryInParentFolders": "never",
   "java.compile.nullAnalysis.mode": "automatic",
   "java.completion.filteredTypes": [],
   "java.configuration.updateBuildConfiguration": "automatic",
@@ -69,8 +65,6 @@
   "java.import.gradle.home": "/usr/bin/gradle",
   "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx8G -Xms100m -Xlog:disable",
   "java.settings.url": "/home/xander/git/dotfiles/.vscode-oss/java-settings.prefs",
-  "openapi.defaultPreviewRenderer": "redoc",
-  "openapi.securityAuditToken": "CiACv26tm0g9KeJFS0QsVm4VJhhboGJZHkMc5+f9mNOGHRIYHYqmozOsof5M6hQK6DTHTxufLk+S9H3gGnazeG/Yd/01mctXPHPyOcJHF3O0B4R1uN8cfgVozwQ64bVI/B+hxqqSHg7aGvHAbNMwZipXYJxC2qVtTYTU3SpKw0nuavV4hsxGHwW3zW4BE5dCih4KWMC4S3LnkNZ7YNEOh0MNWzpUc0Z7aPO/Hmx2zmcwRzId",
   "redhat.telemetry.enabled": false,
   "scm.diffDecorationsIgnoreTrimWhitespace": "inherit",
   "search.collapseResults": "alwaysCollapse",
@@ -116,6 +110,9 @@
     },
     "java:S1114": {
       "level": "on"
+    },
+    "java:S1119": {
+      "level": "off"
     },
     "java:S1120": {
       "level": "on"
@@ -237,6 +234,9 @@
     "java:S1641": {
       "level": "on"
     },
+    "java:S1659": {
+      "level": "off"
+    },
     "java:S1694": {
       "level": "on"
     },
@@ -323,6 +323,9 @@
     },
     "java:S2165": {
       "level": "on"
+    },
+    "java:S2189": {
+      "level": "off"
     },
     "java:S2196": {
       "level": "on"
@@ -444,6 +447,9 @@
     "java:S3750": {
       "level": "on"
     },
+    "java:S3776": {
+      "level": "off"
+    },
     "java:S3937": {
       "level": "on"
     },
@@ -510,6 +516,9 @@
     "java:S6411": {
       "level": "on"
     },
+    "java:S6539": {
+      "level": "off"
+    },
     "java:S6889": {
       "level": "on"
     },
@@ -530,28 +539,7 @@
     },
     "java:S923": {
       "level": "off"
-    },
-    "java:S2189": {
-      "level": "off"
-    },
-    "java:S6539": {
-      "level": "off"
-    },
-    "java:S3776": {
-      "level": "off"
     }
-  },
-  "sortJSON.contextMenu": {
-    "sortJSON": true,
-    "sortJSONAlphaNum": false,
-    "sortJSONAlphaNumReverse": false,
-    "sortJSONKeyLength": false,
-    "sortJSONKeyLengthReverse": false,
-    "sortJSONReverse": false,
-    "sortJSONType": false,
-    "sortJSONTypeReverse": false,
-    "sortJSONValues": false,
-    "sortJSONValuesReverse": false
   },
   "terminal.external.linuxExec": "kitty",
   "terminal.integrated.cursorBlinking": true,
@@ -584,10 +572,10 @@
   "todohighlight.keywords": [
     {
       "diagnosticSeverity": "information",
-      "text": "ignored",
       "regex": {
         "pattern": "(TODO|FIXME)"
-      }
+      },
+      "text": "ignored"
     }
   ],
   "window.menuBarVisibility": "hidden",
@@ -600,16 +588,14 @@
     "editorBracketHighlight.foreground5": "#0088ff",
     "editorBracketHighlight.foreground6": "#8800ff"
   },
+  "workbench.editor.doubleClickTabToToggleEditorGroupSizes": "off",
+  "workbench.editor.editorActionsLocation": "hidden",
   "workbench.editor.empty.hint": "hidden",
+  "workbench.editor.highlightModifiedTabs": true,
   "workbench.editor.revealIfOpen": true,
   "workbench.editor.untitled.labelFormat": "name",
   "workbench.editor.wrapTabs": true,
   "workbench.enableExperiments": false,
   "workbench.startupEditor": "none",
-  "workbench.tips.enabled": false,
-  "workbench.editor.editorActionsLocation": "hidden",
-  "workbench.editor.doubleClickTabToToggleEditorGroupSizes": "off",
-  "workbench.editor.highlightModifiedTabs": true,
-  "git.openRepositoryInParentFolders": "never",
-  "arduino.useArduinoCli": true
+  "workbench.tips.enabled": false
 }
