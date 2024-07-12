@@ -1,3 +1,4 @@
+1password
 acpilight
 albert
 amd-ucode
@@ -5,6 +6,7 @@ base
 base-devel
 batsignal
 bind
+bluez-utils
 brightnessctl
 chrony
 code
@@ -22,9 +24,12 @@ eclipse-java
 eww
 exfatprogs
 firefox
+flutter-bin
 fprintd
 framework-system-git
+fuse2
 fwupd
+fzf
 git
 github-cli
 gnome-keyring
@@ -32,6 +37,7 @@ gradle
 grim
 grimblast-git
 gtk3
+highlight
 hypridle
 hyprland
 hyprlock
@@ -70,6 +76,7 @@ openjdk21-src
 openjdk8-src
 otf-firamono-nerd
 otf-font-awesome
+p7zip
 paccache-hook
 pacman-contrib
 pam-fprint-grosshack
@@ -115,5 +122,6 @@ xdg-desktop-portal-hyprland
 yay
 zip
 zoom
+zoxide
 zsh
 zsh-completions
