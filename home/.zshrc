@@ -12,7 +12,6 @@ plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
   command-not-found
-  z
 )
 zstyle ':omz:update' mode reminder
 
@@ -23,10 +22,11 @@ export EDITOR=code
 export ARCHFLAGS="-arch x86_64"
 
 eval $(thefuck --alias)
+eval "$(zoxide init zsh --cmd cd)"
+
 alias please="fc -ln -1 | xargs sudo"
+alias start="hyprctl dispatch exec"
 
 export XDG_SCREENSHOTS_DIR="$HOME/Downloads"
 
 export JAVA_HOME="/usr/lib/jvm/default"
-
-alias start="hyprctl dispatch exec"
