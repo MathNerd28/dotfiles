@@ -3,10 +3,14 @@
     "editor.defaultFormatter": "Dart-Code.dart-code",
     "editor.inlayHints.enabled": "offUnlessPressed"
   },
+  "[plaintext]": {
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.wordWrap": "on",
+  },
   "breadcrumbs.enabled": false,
   "dart.flutterHotReloadOnSave": "never",
   "dart.sdkPath": "/home/xander/.cache/flutter_sdk/bin/cache/dart-sdk",
-  "debug.autoExpandLazyVariables": true,
   "debug.saveBeforeStart": "nonUntitledEditorsInActiveGroup",
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.cursorSmoothCaretAnimation": "on",
