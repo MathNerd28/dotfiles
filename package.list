@@ -25,6 +25,7 @@ eclipse-java
 eww
 exfatprogs
 firefox
+flatbuffers
 flutter-bin
 fprintd
 framework-system-git
@@ -44,6 +45,7 @@ hyprland
 hyprlock
 hyprpaper
 hyprpicker
+inetutils
 iwd
 jdk-openjdk
 jdk11-openjdk
@@ -94,6 +96,8 @@ playerctld-systemd-unit
 polkit-gnome
 postgresql
 power-profiles-daemon
+python-dbus
+python-pip
 qt5ct
 qt6ct
 radeontop
