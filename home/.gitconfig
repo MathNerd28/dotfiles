@@ -9,7 +9,7 @@
 [user]
 	email = xander.bhalla@gmail.com
 	name = Alexander Bhalla
-	signingkey = 94E2C7BAD0F291B7
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH0T84KVAzTP5KPln+HW56BZQWYiJ1k9A6ByqNygoPs5
 [commit]
 	gpgsign = true
 [diff]
@@ -26,3 +26,7 @@
 	clean = git-lfs clean -- %f
 [advice]
 	statusHints = false
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /opt/1Password/op-ssh-sign
