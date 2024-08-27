@@ -12,6 +12,7 @@ plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
   command-not-found
+  direnv
 )
 zstyle ':omz:update' mode reminder
 
@@ -30,3 +31,5 @@ alias start="hyprctl dispatch exec"
 export XDG_SCREENSHOTS_DIR="$HOME/Downloads"
 
 export JAVA_HOME="/usr/lib/jvm/default"
+
+export DIRENV_LOG_FORMAT=
