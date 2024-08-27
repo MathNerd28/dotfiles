@@ -6,12 +6,13 @@
   "[plaintext]": {
     "editor.unicodeHighlight.ambiguousCharacters": false,
     "editor.unicodeHighlight.invisibleCharacters": false,
-    "editor.wordWrap": "on",
+    "editor.wordWrap": "on"
   },
   "breadcrumbs.enabled": false,
   "dart.flutterHotReloadOnSave": "never",
   "dart.sdkPath": "/home/xander/.cache/flutter_sdk/bin/cache/dart-sdk",
   "debug.saveBeforeStart": "nonUntitledEditorsInActiveGroup",
+  "debug.toolBarLocation": "docked",
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorSurroundingLines": 9999,
@@ -69,6 +70,7 @@
   "java.import.gradle.home": "/usr/bin/gradle",
   "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx8G -Xms100m -Xlog:disable",
   "java.settings.url": "/home/xander/git/dotfiles/.vscode-oss/java-settings.prefs",
+  "python.languageServer": "Jedi",
   "redhat.telemetry.enabled": false,
   "scm.diffDecorationsIgnoreTrimWhitespace": "inherit",
   "search.collapseResults": "alwaysCollapse",
@@ -601,5 +603,6 @@
   "workbench.editor.wrapTabs": true,
   "workbench.enableExperiments": false,
   "workbench.startupEditor": "none",
-  "workbench.tips.enabled": false
+  "workbench.tips.enabled": false,
+  "terminal.integrated.enableMultiLinePasteWarning": false
 }
