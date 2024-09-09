@@ -46,6 +46,7 @@ hyprland
 hyprlock
 hyprpaper
 hyprpicker
+img2pdf
 inetutils
 iptables-nft
 iwd
@@ -101,6 +102,7 @@ polkit-gnome
 postgresql
 power-profiles-daemon
 python-dbus
+python-pgsanity
 python-pip
 qt5ct
 qt6ct
@@ -111,6 +113,7 @@ slurp
 socat
 supabase-bin
 thefuck
+tk
 ttf-fira-code
 ttf-firacode-nerd
 ttf-roboto-mono
