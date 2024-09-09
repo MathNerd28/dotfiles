@@ -545,6 +545,9 @@
     },
     "java:S923": {
       "level": "off"
+    },
+    "python:S3776": {
+      "level": "off"
     }
   },
   "terminal.external.linuxExec": "kitty",
